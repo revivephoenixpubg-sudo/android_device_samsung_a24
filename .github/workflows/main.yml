@@ -1,4 +1,3 @@
-
 name: Check A24 TWRP device tree
 
 on:
@@ -10,6 +9,7 @@ jobs:
     steps:
       - name: Checkout device tree
         uses: actions/checkout@v4
+
       - name: Check required files
         run: |
           test -f BoardConfig.mk
