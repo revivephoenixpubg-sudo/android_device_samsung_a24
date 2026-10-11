@@ -1,17 +1,18 @@
+
 name: Check A24 TWRP device tree
 
 on:
-workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
-check:
-runs-on: ubuntu-latest
-steps:
-- name: Checkout device tree
-uses: actions/checkout@v4
-- name: Check required files
-run: |
-test -f BoardConfig.mk
-test -f omni_a24.mk
-test -f recovery.fstab
-echo "Device tree files found"
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout device tree
+        uses: actions/checkout@v4
+      - name: Check required files
+        run: |
+          test -f BoardConfig.mk
+          test -f omni_a24.mk
+          test -f recovery.fstab
+          echo "Device tree files found"
